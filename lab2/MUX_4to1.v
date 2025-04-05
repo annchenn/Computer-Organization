@@ -1,3 +1,4 @@
+//112550184
 `timescale 1ns/1ps
 
 module MUX_4to1(
@@ -10,6 +11,13 @@ module MUX_4to1(
 	);
 
 /* Write down your code HERE */
-
+	always @(*) begin
+		case(select)
+			2'b00: result = src1;
+			2'b01: result = src2;
+			2'b10: result = src3;
+			2'b11: result = src4;
+		endcase
+	end
 endmodule
 

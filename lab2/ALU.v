@@ -69,7 +69,7 @@ module ALU(
 		result = tmp_result;
 		zero = ~(|tmp_result[31:0]);
 		cout = (op==2'b10 ? carry[31]: 1'b0);
-		overflow = (op[1] == 1'b1 ? carry[30]^carry[31]:0);
+		overflow = (op == 2'b10 ? carry[30]^carry[31]:0);
 	end
 
 endmodule

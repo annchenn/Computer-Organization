@@ -7,6 +7,7 @@ module ALU(
 	ctrl_i,
 	shamt_i,
 	shift_i,
+	
 	result_o,
 	zero_o,
 	overflow
@@ -37,6 +38,7 @@ module ALU(
 	wire leftright;
 	wire [31:0] shift_result;
 	wire [31:0] alu_result;
+	wire set;
 	
 	// Main function
 	assign shift_amount = (shift_i==2'b01) ? shamt_i:src1_i[4:0];
